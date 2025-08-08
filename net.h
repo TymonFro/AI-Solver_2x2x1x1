@@ -6,11 +6,11 @@
 #define F(I,K) for(int I = 0; I<K;I++)
 #define F1(I,K) for(int I = 1; I<=K;I++)
 using namespace std;
-const double lr = 0.001;
+const double lr = 0.005;
 const double gam = 0.95;
 const int in_layer = 24;
 const int hidden_layers = 32;
-const int out_layer = 9;
+const int out_layer = 7;
 const int batch_size = 64;
 const double maxNorm = 1.0;
 double epsilon = 1.0;      

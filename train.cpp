@@ -291,7 +291,7 @@ signed main(){
 
     deque<memory>buffer;
 
-    for(int epoch = 10000; epoch <  il; epoch++){
+    for(int epoch = 0; epoch <  il; epoch++){
         epsilon = max(epsilon * epsilon_decay, epsilon_min);
         
         Cube2x2x1x1 cube = Cube2x2x1x1();
@@ -300,7 +300,7 @@ signed main(){
         if(epoch < 1200){
             scramble = 1;
         }
-        else if(epoch < 5000){
+        else if(epoch < 3000){
             scramble = uniform_int_distribution<int>(1, scramble_moves)(rng);
             scramble = min(scramble, 2);
         }
@@ -309,8 +309,8 @@ signed main(){
             scramble = min(scramble, 3);
         }
         else if(epoch < 20000){
-            scramble = uniform_int_distribution<int>(1, scramble_moves + 2)(rng);
-            scramble = min(scramble, 7);
+            scramble = uniform_int_distribution<int>(1, scramble_moves + 1)(rng);
+            scramble = min(scramble, 6);
         }
 
         if(epoch == 3000){
@@ -322,9 +322,9 @@ signed main(){
         if(epoch == 7000){
             epsilon = 0.5;
         }
-        if(epoch == 15000){
-            epsilon = 0.5;
-        }
+        // if(epoch == 15000){
+        //     epsilon = 0.5;
+        // }
         
         F(i,scramble){
             int move = uniform_int_distribution<int>(0, 5)(rng);

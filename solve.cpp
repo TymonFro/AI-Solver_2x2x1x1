@@ -77,7 +77,7 @@ signed main(){
     while(true){
         cout<<"Enter number of moves: ";
         cin >> scramble_moves;
-        cout<<"Enter moves (Rz2, Fx2, Rx, Rx', Rx2, Fz, Fz', Fz2): ";
+        cout<<"Enter moves (Rz2, Fx2, Rx, Rx', Fz, Fz'): ";
 
         vector<int>moves;
         string x;

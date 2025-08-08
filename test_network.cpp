@@ -94,7 +94,7 @@ signed main(){
         }
 
         for(int move_count = 0; ; move_count++){
-            if(move_count >= scramble_moves+1){
+            if(move_count >= scramble_moves){
                 cout<<"Solution has not been found ;(\n"; exit(0); break;
             }
 
